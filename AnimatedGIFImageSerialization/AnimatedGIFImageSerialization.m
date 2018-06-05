@@ -211,7 +211,7 @@ static inline void animated_gif_swizzleSelector(Class class, SEL originalSelecto
 
 #pragma mark -
 
-+ (UIImage *)animated_gif_imageNamed:(NSString *)name __attribute__((objc_method_family(new))) {
++ (UIImage *)animated_gif_imageNamed:(NSString *)name {
     NSString *path = [[NSBundle mainBundle] pathForResource:[name stringByDeletingPathExtension] ofType:[name pathExtension]];
     if (!path) {
         path = [[NSBundle mainBundle] pathForResource:[[name stringByDeletingPathExtension] stringByAppendingString:@"@2x"] ofType:[name pathExtension]];
@@ -227,7 +227,7 @@ static inline void animated_gif_swizzleSelector(Class class, SEL originalSelecto
     return [self animated_gif_imageNamed:name];
 }
 
-+ (UIImage *)animated_gif_imageWithContentsOfFile:(NSString *)path __attribute__((objc_method_family(new))) {
++ (UIImage *)animated_gif_imageWithContentsOfFile:(NSString *)path {
     if (path) {
         NSData *data = [NSData dataWithContentsOfFile:path];
         if (AnimatedGifDataIsValid(data)) {
@@ -242,7 +242,7 @@ static inline void animated_gif_swizzleSelector(Class class, SEL originalSelecto
     return [self animated_gif_imageWithContentsOfFile:path];
 }
 
-+ (UIImage *)animated_gif_imageWithData:(NSData *)data __attribute__((objc_method_family(init))) {
++ (UIImage *)animated_gif_imageWithData:(NSData *)data {
     if (AnimatedGifDataIsValid(data)) {
         return UIImageWithAnimatedGIFData(data);
     }
@@ -250,9 +250,7 @@ static inline void animated_gif_swizzleSelector(Class class, SEL originalSelecto
     return [self animated_gif_imageWithData:data];
 }
 
-+ (UIImage *)animated_gif_imageWithData:(NSData *)data
-                                  scale:(CGFloat)scale __attribute__((objc_method_family(init)))
-{
++ (UIImage *)animated_gif_imageWithData:(NSData *)data scale:(CGFloat)scale {
     if (AnimatedGifDataIsValid(data)) {
         return UIImageWithAnimatedGIFData(data, scale, 0.0f, nil);
     }

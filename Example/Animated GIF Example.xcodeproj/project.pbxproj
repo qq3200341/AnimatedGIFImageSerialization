@@ -155,6 +155,12 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Mattt Thompson";
+				TargetAttributes = {
+					F82E75AA18ABDC4E002D596E = {
+						DevelopmentTeam = 6XT62U87V8;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = F82E75A618ABDC4E002D596E /* Build configuration list for PBXProject "Animated GIF Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -286,12 +292,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6XT62U87V8;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Animated GIF Example/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Animated GIF Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maipu.Animated-GIF";
 				PRODUCT_NAME = "Animated GIF";
+				PROVISIONING_PROFILE = "8a3bb50a-d737-4185-afd3-9cb0c3a15db2";
+				PROVISIONING_PROFILE_SPECIFIER = "迈普欣动DevelopmentProfile";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -301,12 +312,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Animated GIF Example/Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Animated GIF Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maipu.Animated-GIF";
 				PRODUCT_NAME = "Animated GIF";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
